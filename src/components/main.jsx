@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import RatingInformation from "./rating-information"
 import "../scss/main.scss"
 
 export default class Main extends Component {
@@ -13,8 +14,10 @@ export default class Main extends Component {
   render() {
     return(
       <>
-        <header>header</header>
-        <main>main</main>
+        <header><h1>Rocket Insurance? Sure!</h1></header>
+        <main>
+          <RatingInformation />
+        </main>
         <footer>footer</footer>
       </>
     )
