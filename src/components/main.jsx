@@ -3,8 +3,6 @@ import axios from "axios"
 import RatingInformation from "./rating-information"
 import "../scss/main.scss"
 
-const API_ENDPOINT = 'https://fed-challenge.sure.now.sh/api/v1/quotes'
-
 export default class Main extends Component {
 
   constructor(props) {
@@ -29,9 +27,9 @@ export default class Main extends Component {
           postal
         }
       }
-      axios.post(API_ENDPOINT, body).then((res) => {
+      axios.post('/quote', body).then((res) => {
         console.log(res)
-        this.setState({isLoading: false, quote: res.data})
+        this.setState({isLoading: false, quote: res.data.quote})
       })
     })
   }

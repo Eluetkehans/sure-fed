@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Eluetkehans/sure-fed#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "mini-css-extract-plugin": "^0.8.0"
   },
