@@ -55,7 +55,8 @@ module.exports = {
         exclude: /node_modules/,
         loader: "babel-loader",
         options: {
-          presets: ['@babel/preset-env', '@babel/preset-react']
+          presets: ['@babel/preset-env', '@babel/preset-react'],
+          plugins: ["@babel/plugin-proposal-class-properties"]
         }
       },
       { test: /\.eot(\?v=\d+.\d+.\d+)?$/, loader: "file-loader" },
