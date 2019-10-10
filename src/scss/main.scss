@@ -1,3 +1,50 @@
+@import "./vars.scss";
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 body {
-  background-color: yellow;
+  margin: 0;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  height: 100vh;
+}
+
+.main--header-container {
+  box-sizing: border-box;
+  color: $blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $paddingMedium $paddingSmall;
+  border-bottom: 2px solid $lightGrey;
+  width: 100%;
+}
+
+.main--header-title {
+  margin: 0;
+}
+
+.main--content-container {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.main--section-container {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: $paddingMedium $paddingSmall;
+}
+
+.main--footer {
+  // thin content footer example
+  background-color: $blue;
+  height: $paddingMedium;
 }

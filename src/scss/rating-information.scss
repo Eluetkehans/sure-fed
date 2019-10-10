@@ -1,0 +1,93 @@
+@import "./vars.scss";
+
+.rating-information--card {
+  box-shadow: -1px 2px 2px $lightGrey;
+  max-width: 600px;
+  width: 100%;
+}
+
+.rating-information--card-title {
+  border: 2px solid $blue;
+  border-bottom: none;
+  border-top-left-radius: $slightRadius;
+  border-top-right-radius: $slightRadius;
+  background-color: $blue;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: $paddingMedium 0;
+}
+
+.rating-information--form-container {
+  border: 2px solid $lightGrey;
+  border-bottom-left-radius: $slightRadius;
+  border-bottom-right-radius: $slightRadius;
+  border-top: none;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 $paddingSmall $paddingMedium;
+  align-items: center;
+
+  @include tablet {
+    padding: 0 $paddingMedium $paddingMedium;
+  }
+}
+
+.rating-information--form-group {
+  display: flex;
+  flex-basis: 0;
+  flex-grow: 1;
+  margin-top: $paddingMedium;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  > input {
+    border: 2px solid $lightGrey;
+    box-sizing: border-box;
+    flex-grow: 1;
+    margin-left: $paddingSmall;
+    height: 32px;
+  }
+
+  > label {
+    min-width: 80px;
+  }
+}
+
+.rating-information--name-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @include tablet {
+    flex-direction: row;
+
+    > .rating-information--form-group + .rating-information--form-group {
+      margin-left: $paddingSmall;
+    }
+  }
+}
+
+.rating-information--address-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.rating-information--button {
+  transition: background-color 0.5s ease;
+  background-color: $blue;
+  color: white;
+  border-radius: $greatRadius;
+  margin-top: $paddingMedium;
+  font-size: $fontMedium;
+  padding: $paddingSmall;
+  width: 40%;
+
+  &:hover {
+    background-color: darken($blue, $darkenPercent)
+  }
+}

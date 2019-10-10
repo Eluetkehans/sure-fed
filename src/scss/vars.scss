@@ -1,0 +1,27 @@
+// colors
+$blue: #1c53e7;
+$lightGrey: #979797;
+
+$darkenPercent: 10%;
+
+// padding
+$paddingMedium: 24px;
+$paddingSmall: 12px;
+$paddingXSmall: 8px;
+
+// Radii
+$greatRadius: 28px;
+$slightRadius: 4px;
+
+// fonts
+$fontHero: 48px;
+$fontLarge: 32px;
+$fontMedium: 18px;
+
+@mixin tablet {
+  @media (min-width: 599px) { @content; }
+}
+
+@mixin desktop {
+  @media (min-width: 799px) { @content; }
+}

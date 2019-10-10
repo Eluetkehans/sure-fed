@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import "../scss/rating-information.scss"
 
 
 const RatingInformation = ({getQuote, isLoading}) => {
@@ -17,69 +18,91 @@ const RatingInformation = ({getQuote, isLoading}) => {
   }
 
   return (
-    <article>
-      <h2>Rating Information</h2>
-      <form onSubmit={formSubmit}>
-        <div className="rating-information--form-group">
-          <label htmlFor="first_name">First Name</label>
-          <input
-            id="first_name"
-            type="text"
-            value={first_name}
-            onChange={({target: {value}}) => setFirst_name(value)}
-          />
-        </div>
-        <div className="rating-information--form-group">
-          <label htmlFor="last_name">Last Name</label>
-          <input
-            id="last_name"
-            type="text"
-            value={last_name}
-            onChange={({target: {value}}) => setLast_name(value)}
-          />
-        </div>
-        <div className="rating-information--form-group">
-          <label htmlFor="line_1">Address</label>
-          <input
-            id="line_1"
-            type="text"
-            value={line_1}
-            onChange={({target: {value}}) => setLine_1(value)}
-          />
-          <label htmlFor="line_2">Line 2</label>
-          <input
-            id="line_2"
-            type="text"
-            value={line_2}
-            onChange={({target: {value}}) => setLine_2(value)}
-          />
-          <label htmlFor="city">City</label>
-          <input
-            id="city"
-            type="text"
-            value={city}
-            onChange={({target: {value}}) => setCity(value)}
-          />
-          <label htmlFor="region">Region</label>
-          <input
-            id="region"
-            type="text"
-            value={region}
-            onChange={({target: {value}}) => setRegion(value)}
-          />
-          <label htmlFor="postal">Zip Code</label>
-          <input
-            id="postal"
-            type="text"
-            value={postal}
-            onChange={({target: {value}}) => setPostal(value)}
-          />
-        </div>
-        <button
-          disabled={isLoading}
-          type="submit"
-        >Submit</button>
-      </form>
+    <article className="main--section-container">
+      <section className="rating-information--card">
+        <h2 className="rating-information--card-title">Rating Information</h2>
+        <form className="rating-information--form-container" onSubmit={formSubmit}>
+          <div className="rating-information--name-container">
+            <div className="rating-information--form-group">
+              <label htmlFor="first_name">First Name</label>
+              <input
+                id="first_name"
+                type="text"
+                placeholder="James"
+                value={first_name}
+                onChange={({target: {value}}) => setFirst_name(value)}
+              />
+            </div>
+            <div className="rating-information--form-group">
+              <label htmlFor="last_name">Last Name</label>
+              <input
+                id="last_name"
+                type="text"
+                placeholder="Smith"
+                value={last_name}
+                onChange={({target: {value}}) => setLast_name(value)}
+              />
+            </div>
+          </div>
+          <div className="rating-information--address-block">
+            <div className="rating-information--form-group">
+              <label htmlFor="line_1">Address</label>
+              <input
+                id="line_1"
+                type="text"
+                placeholder="1220 Stanford Heart dr."
+                value={line_1}
+                onChange={({target: {value}}) => setLine_1(value)}
+              />
+            </div>
+            <div className="rating-information--form-group">
+              <label htmlFor="line_2">Line 2</label>
+              <input
+                id="line_2"
+                type="text"
+                placeholder="Apt C720"
+                value={line_2}
+                onChange={({target: {value}}) => setLine_2(value)}
+              />
+            </div>
+            <div className="rating-information--form-group">
+              <label htmlFor="city">City</label>
+              <input
+                id="city"
+                type="text"
+                placeholder="Olympia"
+                value={city}
+                onChange={({target: {value}}) => setCity(value)}
+              />
+            </div>
+            <div className="rating-information--form-group">
+              <label htmlFor="region">Region</label>
+              <input
+                id="region"
+                type="text"
+                placeholder="WA"
+                value={region}
+                onChange={({target: {value}}) => setRegion(value)}
+              />
+            </div>
+            <div className="rating-information--form-group">
+              <label htmlFor="postal">Zip Code</label>
+              <input
+                id="postal"
+                type="text"
+                placeholder="98502"
+                value={postal}
+                onChange={({target: {value}}) => setPostal(value)}
+              />
+            </div>
+          </div>
+          <button
+            className="rating-information--button"
+            disabled={isLoading}
+            type="submit"
+          >Submit</button>
+        </form>
+      </section>
     </article>
   )
 }

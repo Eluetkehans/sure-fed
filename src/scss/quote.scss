@@ -1,0 +1,84 @@
+@import "./vars.scss";
+
+.quote--title {
+  font-size: $fontLarge;
+  margin: 0;
+
+  @include tablet {
+    font-size: $fontHero;
+  }
+}
+
+.quote--card {
+  display: flex;
+  font-size: $fontMedium;
+  margin-top: $paddingMedium;
+  
+  @include tablet {
+    font-size: $fontLarge;
+  }
+}
+
+.quote--rocket {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $blue;
+  font-size: 72px;
+  padding: $paddingSmall;
+  border-top-left-radius: $slightRadius;
+  border-bottom-left-radius: $slightRadius;
+}
+
+.quote--content-container {
+  box-sizing: border-box;
+  border: 2px solid $lightGrey;
+  border-left: none;
+  border-top-right-radius: $slightRadius;
+  border-bottom-right-radius: $slightRadius;
+  padding: $paddingSmall $paddingMedium;
+  display: flex;
+  flex-direction: column;
+}
+
+.quote--results-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+
+  > * {
+    width: 100%;
+  }
+  
+  > * + * {
+    margin-top: $paddingSmall;
+  }
+  
+  > select {
+    border: 2px solid $lightGrey;
+    height: $fontLarge;
+  }
+  
+  @include tablet {
+    flex-direction: row;
+
+    > * {
+      width: inherit;
+    }
+
+    > * + * {
+      margin-left: $paddingSmall;
+      margin-top: 0;
+    }
+  }
+}
+.quote--results-row + .quote--results-row {
+  margin-top: $paddingSmall;
+}
+
+@include tablet {
+  .quote--results-row + .quote--results-row {
+    margin-top: $paddingMedium;
+  }
+}

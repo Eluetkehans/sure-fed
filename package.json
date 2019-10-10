@@ -6,7 +6,8 @@
   "scripts": {
     "build": "export DEV_MODE=false && npm run clean && webpack --config ./webpack.config.js",
     "clean": "rm -rf public && mkdir public",
-    "start": "export DEV_MODE=true && webpack-dev-server --config ./webpack.config.js",
+    "start": "npm i --production && node ./server/index.js",
+    "startDev": "export DEV_MODE=true && webpack-dev-server --config ./webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/Eluetkehans/sure-fed#readme",
   "dependencies": {
+    "axios": "^0.19.0",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "mini-css-extract-plugin": "^0.8.0"
@@ -30,7 +32,6 @@
     "@babel/preset-env": "^7.6.2",
     "@babel/preset-react": "^7.0.0",
     "autoprefixer": "^9.6.4",
-    "axios": "^0.19.0",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
     "file-loader": "^4.2.0",
