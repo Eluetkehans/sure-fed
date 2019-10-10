@@ -4,6 +4,11 @@ import "../scss/rating-information.scss"
 
 const RatingInformation = ({getQuote, isLoading}) => {
   
+  // I think this component would actually be better as a
+  // stateful component, but I figured you guys would
+  // want to see the React Hooks demoed. Ask me about
+  // anonymous functions and React render cycles sometime.
+  
   const[first_name, setFirst_name] = useState('')
   const[last_name, setLast_name] = useState('')
   const[line_1, setLine_1] = useState('')

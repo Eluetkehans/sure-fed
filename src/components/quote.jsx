@@ -9,6 +9,8 @@ const Quote = (({quote}) => {
     <article className="main--section-container">
       <h2 className="quote--title">Quote Overview</h2>
       <section className="quote--card">
+        {/* It is better to use an <img /> tag pointing to a cdn,
+        but I wanted your rocket, darn it! :) */}
         <div className="quote--rocket">🚀</div>
         <div className="quote--content-container">
           <div className="quote--results-row">

@@ -10,6 +10,7 @@
 }
 
 .quote--card {
+  box-shadow: -1px 2px 2px $lightGrey;
   display: flex;
   font-size: $fontMedium;
   margin-top: $paddingMedium;
@@ -47,7 +48,8 @@
   align-items: center;
   flex-wrap: wrap;
 
-  > * {
+  > * { // just using selectors here for knowledge demo.
+    // it is more effecient at runtime to just use class names. 
     width: 100%;
   }
   
