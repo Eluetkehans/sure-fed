@@ -14,6 +14,6 @@ app.post('/quote', async (req, res) => {
   res.send(proxyRes.data)
 })
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log("server up")
 })
